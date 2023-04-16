@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "5.0.0",
-  "homepage": "https://gitname.github.io/tcc2",
+  "homepage": "https://igorwilbert.github.io/moneysinos",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",

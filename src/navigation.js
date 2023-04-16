@@ -10,8 +10,8 @@ const Navigation = () => {
     <>
       <Header />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/flashcards" element={<FlashCards />} />
+        <Route path="moneysinos/" element={<Home />} />
+        <Route path="moneysinos/flashcards" element={<FlashCards />} />
       </Routes>
     </>
   );

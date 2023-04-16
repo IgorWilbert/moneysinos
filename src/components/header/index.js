@@ -2,7 +2,7 @@ import "./styles.css";
 
 const Header = (onClick) => {
   return (
-    <a href="/" style={{ textDecoration: "none" }}>
+    <a href="/moneysinos" style={{ textDecoration: "none" }}>
       <div className="header">
         <h1 className="header-title" onClick={onClick}>
           MoneySinos

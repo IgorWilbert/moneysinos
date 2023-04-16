@@ -4,13 +4,30 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import { BrowserRouter } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
+
+import Header from "./components/header";
+
+import FlashCards from "./pages/flashCards";
+import Home from "./pages/home";
+
+const router = createHashRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/flashcards",
+    element: <FlashCards />,
+  },
+]);
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <div className="App">
+      <Header />
+      <RouterProvider router={router} />
+    </div>
   </React.StrictMode>,
   document.getElementById("root")
 );

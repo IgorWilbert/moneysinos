@@ -7,7 +7,7 @@ const Home = () => (
       title="FlashCards"
       imageUrl={"https://source.unsplash.com/random/300×300"}
       description="Amplie seu conhecimento sobre investimentos"
-      linkUrl="moneysinos/flashcards"
+      linkUrl="#/flashcards"
     />
   </div>
 );

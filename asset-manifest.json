@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tcc2/static/css/main.215106ef.css",
-    "main.js": "/tcc2/static/js/main.8dbe5226.js",
-    "static/js/787.edd59a96.chunk.js": "/tcc2/static/js/787.edd59a96.chunk.js",
-    "index.html": "/tcc2/index.html",
-    "main.215106ef.css.map": "/tcc2/static/css/main.215106ef.css.map",
-    "main.8dbe5226.js.map": "/tcc2/static/js/main.8dbe5226.js.map",
-    "787.edd59a96.chunk.js.map": "/tcc2/static/js/787.edd59a96.chunk.js.map"
+    "main.css": "/moneysinos/static/css/main.215106ef.css",
+    "main.js": "/moneysinos/static/js/main.f98b7e06.js",
+    "static/js/787.edd59a96.chunk.js": "/moneysinos/static/js/787.edd59a96.chunk.js",
+    "index.html": "/moneysinos/index.html",
+    "main.215106ef.css.map": "/moneysinos/static/css/main.215106ef.css.map",
+    "main.f98b7e06.js.map": "/moneysinos/static/js/main.f98b7e06.js.map",
+    "787.edd59a96.chunk.js.map": "/moneysinos/static/js/787.edd59a96.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.215106ef.css",
-    "static/js/main.8dbe5226.js"
+    "static/js/main.f98b7e06.js"
   ]
 }

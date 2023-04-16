@@ -1,0 +1,10 @@
+.question-options-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.question-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

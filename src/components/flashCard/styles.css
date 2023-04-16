@@ -1,0 +1,54 @@
+.flash-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  width: 80vw;
+  max-width: 400px;
+  height: 350px;
+  position: relative;
+  border-radius: 15px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.flash-card--image {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.flash-card--content {
+  height: 180px;
+  background-color: #ffffff;
+  opacity: 70%;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.flash-card--functions {
+  padding: 20px;
+}
+
+.flash-card--title {
+  color: #5ed5a8;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.flash-card--description {
+  color: #1b232a;
+  font-size: 14px;
+}
+
+.flash-card--button {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

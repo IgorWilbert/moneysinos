@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import ArrowButton from "../arrowButton";
 import Question from "../question";
@@ -7,6 +7,15 @@ import "./styles.css";
 
 const Quiz = ({ quizData }) => {
   const [questionIndex, setQuestionIndex] = useState(0);
+  const [isFinished, setIsFinished] = useState(false);
+
+  useEffect(() => {
+    if (!quizData.map((q) => q.selectedOption).includes(-1)) {
+      setIsFinished(true);
+    } else {
+      setIsFinished(false);
+    }
+  }, [quizData.map((q) => q.selectedOption)]);
 
   const onClickBackward = (i, lastIdx) => {
     if (i - 1 >= 0) {
@@ -21,7 +30,14 @@ const Quiz = ({ quizData }) => {
       <div>
         {quizData.map(
           (question, index) =>
-            index === questionIndex && <Question question={question} />
+            index === questionIndex && (
+              <Question
+                question={question}
+                onSelect={(n) => {
+                  quizData[index].selectedOption = n;
+                }}
+              />
+            )
         )}
       </div>
       <div className="question-navigation">
@@ -39,6 +55,7 @@ const Quiz = ({ quizData }) => {
           }
         />
       </div>
+      {isFinished && <h1>DONE!!!!!</h1>}
     </div>
   );
 };

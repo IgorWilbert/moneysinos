@@ -4,8 +4,8 @@ import Radio from "@mui/material/Radio";
 
 import "./styles.css";
 
-const Question = ({ question }) => {
-  const [selected, setSelected] = useState(-1);
+const Question = ({ question, onSelect }) => {
+  const [selected, setSelected] = useState(question.selectedOption);
 
   return (
     <div className="question">
@@ -15,7 +15,10 @@ const Question = ({ question }) => {
           <li className="question-options-item">
             <Radio
               checked={selected === index}
-              onChange={() => setSelected(index)}
+              onChange={() => {
+                setSelected(index);
+                onSelect(index);
+              }}
             />
             <p>{option.text}</p>
           </li>

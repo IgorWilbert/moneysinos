@@ -9,6 +9,12 @@ const Home = () => (
       description="Amplie seu conhecimento sobre investimentos"
       linkUrl="#/flashcards"
     />
+    <Module
+      title="Quiz"
+      imageUrl={"https://source.unsplash.com/random/300×300"}
+      description="Teste seu conhecimento sobre investimentos"
+      linkUrl="#/quiz"
+    />
   </div>
 );
 

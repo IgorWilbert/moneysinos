@@ -22,7 +22,7 @@
   width: 250px;
   height: 130px;
   z-index: 999;
-  background-color: #ffffff;
+  background-color: var(--white);
   opacity: 70%;
   padding: 15px;
   border-radius: 0 15px 0 0;
@@ -32,13 +32,13 @@
 }
 
 .module-title {
-  color: #5ed5a8;
+  color: var(--green);
   font-weight: bold;
   font-size: 16px;
 }
 
 .module-description {
-  color: #1b232a;
+  color: var(--dark-gray);
   font-size: 14px;
 }
 

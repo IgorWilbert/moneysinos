@@ -1,7 +1,7 @@
 .flip-button {
   width: 55px;
   height: 45px;
-  background-color: #e3e8ed;
+  background-color: var(--light-gray);
   display: flex;
   justify-content: center;
   align-items: center;

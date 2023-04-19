@@ -20,7 +20,7 @@
 
 .flash-card--content {
   height: 180px;
-  background-color: #ffffff;
+  background-color: var(--white);
   opacity: 70%;
   padding: 15px;
   position: absolute;
@@ -35,13 +35,13 @@
 }
 
 .flash-card--title {
-  color: #5ed5a8;
+  color: var(--green);
   font-weight: bold;
   font-size: 16px;
 }
 
 .flash-card--description {
-  color: #1b232a;
+  color: var(--dark-gray);
   font-size: 14px;
 }
 

@@ -4,12 +4,14 @@ import Radio from "@mui/material/Radio";
 
 import "./styles.css";
 
-const Question = ({ question, onSelect }) => {
+const Question = ({ question, number, onSelect }) => {
   const [selected, setSelected] = useState(question.selectedOption);
 
   return (
     <div className="question">
-      <div>{question.heading}</div>
+      <p>{`Pegunta ${number}:`}</p>
+      <p>{`Vale ${question.value} pontos`}</p>
+      <p>{question.heading}</p>
       <ul style={{ listStyleType: "none" }}>
         {question.options.map((option, index) => (
           <li className="question-options-item">

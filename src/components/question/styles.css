@@ -1,10 +1,26 @@
-.question-options-item {
-  display: flex;
-  flex-direction: row;
-}
-
-.question-navigation {
+.question-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.question-header-number {
+  font-size: 20px;
+}
+
+.question-header-points {
+  color: var(--green);
+  background-color: var(--dark-gray);
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.question-options-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.question-options-item {
+  display: flex;
+  flex-direction: row;
 }

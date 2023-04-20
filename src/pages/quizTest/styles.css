@@ -3,3 +3,10 @@
   flex-direction: column;
   align-items: center;
 }
+
+.quiz-test-content {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}

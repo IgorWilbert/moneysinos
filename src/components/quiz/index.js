@@ -39,6 +39,12 @@ const Quiz = ({ quizData }) => {
         return acc + q.value;
       }, 0);
 
+  const resetQuiz = (quizData) => {
+    quizData.forEach((q) => (q.selectedOption = -1));
+    setShowScore(false);
+    setIsFinished(false);
+  };
+
   return (
     <div className="quiz">
       {!showScore && (
@@ -57,7 +63,7 @@ const Quiz = ({ quizData }) => {
                 )
             )}
           </div>
-          <div className="question-navigation">
+          <div className="quiz-navigation">
             <ArrowButton
               isForward={false}
               onClick={() =>
@@ -85,6 +91,19 @@ const Quiz = ({ quizData }) => {
           )} e você acertou ${getQuestionsRight(quizData)} de ${
             quizData.length
           } questões`}</p>
+          <div className="quiz-result-buttons">
+            <Button
+              label="Tentar Novamente"
+              onClick={() => resetQuiz(quizData)}
+            />
+            <a
+              href="#/"
+              style={{ textDecoration: "none" }}
+              onClick={() => resetQuiz(quizData)}
+            >
+              <Button label="Voltar à Home" />
+            </a>
+          </div>
         </div>
       )}
     </div>

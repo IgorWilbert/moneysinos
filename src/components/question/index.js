@@ -9,10 +9,12 @@ const Question = ({ question, number, onSelect }) => {
 
   return (
     <div className="question">
-      <p>{`Pegunta ${number}:`}</p>
-      <p>{`Vale ${question.value} pontos`}</p>
+      <div className="question-header">
+        <p className="question-header-number">{`Pergunta ${number}`}</p>
+        <p className="question-header-points">{`Vale ${question.value} pontos`}</p>
+      </div>
       <p>{question.heading}</p>
-      <ul style={{ listStyleType: "none" }}>
+      <ul className="question-options-list">
         {question.options.map((option, index) => (
           <li className="question-options-item">
             <Radio

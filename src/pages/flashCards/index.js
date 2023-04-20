@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import FlashCard from "../../components/flashCard";
+import Title from "../../components/title";
 
 import "./styles.css";
 
@@ -51,7 +52,7 @@ const FlashCards = () => {
 
   return (
     <div className="flash-cards">
-      Flash Cards
+      <Title name="Flash Cards" />
       <div>
         {FlashCardsData.map((card, index) => (
           <>

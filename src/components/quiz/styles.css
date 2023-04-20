@@ -1,0 +1,14 @@
+.quiz-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.quiz-result-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding-top: 50px;
+}

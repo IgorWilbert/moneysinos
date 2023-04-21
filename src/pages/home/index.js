@@ -15,6 +15,12 @@ const Home = () => (
       description="Teste seu conhecimento sobre investimentos"
       linkUrl="#/quiz"
     />
+    <Module
+      title="Mercado Atual"
+      imageUrl={"https://source.unsplash.com/random/300×300"}
+      description="Principais índices e tendências para ajudar você a investir"
+      linkUrl="#/mercado-atual"
+    />
   </div>
 );
 

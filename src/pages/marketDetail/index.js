@@ -1,5 +1,16 @@
 import { useEffect, useState } from "react";
 
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
+
 import "./styles.css";
 
 /*
@@ -37,27 +48,51 @@ https://www.google.com/search?q=stock+price+which+is+more+important+low+high+ope
 */
 
 const MarketDetail = () => {
-  const [stockData, setStockData] = useState([{ valor: 0 }]);
+  const [ipcaData, setIpcaData] = useState([{ valor: 0 }]);
+  const [stockData, setStockData] = useState({});
 
   useEffect(() => {
-    getstockDataWithFetch();
+    getIpcaDataWithFetch();
   }, []);
 
-  const getstockDataWithFetch = async () => {
+  const getIpcaDataWithFetch = async () => {
     const response = await fetch(
-      "https://query1.finance.yahoo.com/v8/finance/chart/PETR4.SA?interval=15m&period1=1681872126&period2=1681958526"
+      "https://brapi.dev/api/quote/PETR4?range=1mo&interval=1d"
     );
 
     const jsonData = await response.json();
     console.log(jsonData);
 
-    setStockData(jsonData);
+    // const data = jsonData[0].indicators.quote[0].close;
+    // console.log(data);
+
+    setIpcaData(jsonData);
   };
 
   return (
     <div className="marketDetail">
       <h1>Mercado Atual</h1>
-      <div>{`IPCA: ${stockData}`}</div>
+      <div>{`IPCA: ${ipcaData[0].valor}`}</div>
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart
+          width={500}
+          height={300}
+          data={stockData}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 };

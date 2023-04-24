@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import Stocks from "../../components/stocks";
+
 import "./styles.css";
 
 /*
@@ -37,27 +39,28 @@ https://www.google.com/search?q=stock+price+which+is+more+important+low+high+ope
 */
 
 const MarketDetail = () => {
-  const [stockData, setStockData] = useState([{ valor: 0 }]);
+  const [ipcaData, setIpcaData] = useState([{ valor: 0 }]);
 
   useEffect(() => {
-    getstockDataWithFetch();
+    getIpcaDataWithFetch();
   }, []);
 
-  const getstockDataWithFetch = async () => {
+  const getIpcaDataWithFetch = async () => {
     const response = await fetch(
-      "https://query1.finance.yahoo.com/v8/finance/chart/PETR4.SA?interval=15m&period1=1681872126&period2=1681958526"
+      "https://api.bcb.gov.br/dados/serie/bcdata.sgs.11426/dados?formato=json&dataInicial=01/01/2023&dataFinal=30/01/2023"
     );
 
     const jsonData = await response.json();
     console.log(jsonData);
 
-    setStockData(jsonData);
+    setIpcaData(jsonData);
   };
 
   return (
-    <div className="marketDetail">
+    <div className="market-detail">
       <h1>Mercado Atual</h1>
-      <div>{`IPCA: ${stockData}`}</div>
+      <div>{`IPCA: ${ipcaData[0].valor}`}</div>
+      <Stocks />
     </div>
   );
 };

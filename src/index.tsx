@@ -9,7 +9,6 @@ import Header from "./components/header";
 import FlashCards from "./pages/flashCards";
 import Home from "./pages/home";
 import Market from "./pages/market";
-import MarketDetail from "./pages/marketDetail";
 import QuizTest from "./pages/quizTest";
 
 const router = createHashRouter([
@@ -28,10 +27,6 @@ const router = createHashRouter([
   {
     path: "/mercado-atual",
     element: <Market />,
-  },
-  {
-    path: "/mercado-detalhe",
-    element: <MarketDetail />,
   },
 ]);
 

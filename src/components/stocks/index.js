@@ -47,9 +47,8 @@ https://www.google.com/search?q=stock+price+which+is+more+important+low+high+ope
 
 */
 
-const MarketDetail = () => {
-  const [ipcaData, setIpcaData] = useState([{ valor: 0 }]);
-  const [stockData, setStockData] = useState({});
+const Stocks = () => {
+  const [stockData, setStockData] = useState([]);
 
   useEffect(() => {
     getIpcaDataWithFetch();
@@ -61,18 +60,22 @@ const MarketDetail = () => {
     );
 
     const jsonData = await response.json();
-    console.log(jsonData);
 
-    // const data = jsonData[0].indicators.quote[0].close;
-    // console.log(data);
+    const formatted = jsonData.results[0].historicalDataPrice.map((data) => {
+      const date = new Date(data.date * 1000);
 
-    setIpcaData(jsonData);
+      const day = date.getDate().toString().padStart(2, "0");
+      const month = (date.getMonth() + 1).toString().padStart(2, "0");
+      return {
+        high: data.high,
+        date: `${day}/${month}`,
+      };
+    });
+    setStockData(formatted);
   };
 
   return (
-    <div className="marketDetail">
-      <h1>Mercado Atual</h1>
-      <div>{`IPCA: ${ipcaData[0].valor}`}</div>
+    <div className="stocks-graph">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}
@@ -86,15 +89,15 @@ const MarketDetail = () => {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+          <XAxis dataKey="date" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="high" stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer>
     </div>
   );
 };
 
-export default MarketDetail;
+export default Stocks;

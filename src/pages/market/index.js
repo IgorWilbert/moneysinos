@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import SymbolsData from "../../data/symbols";
 
 import Symbol from "../../components/symbol";
-import Stocks from "../../components/stocks";
 
 import "./styles.css";
 

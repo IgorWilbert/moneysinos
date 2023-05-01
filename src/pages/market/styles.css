@@ -3,4 +3,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+.market-detail-rates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.market-detail-ipca .market-detail-selic {
+  display: flex;
+  flex-direction: column;
 }

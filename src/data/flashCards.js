@@ -61,7 +61,7 @@ const FlashCardsData = [
     imageUrl: "https://source.unsplash.com/random/300×300",
     question: "O que é diversificação de investimentos?",
     answer:
-      "Diversificação de investimentos consiste em investir em várias classes de ativos financeiros diferentes. Essa estratégia de investir se baseia na ideia de que é muito difícil prever o comportamento do mercado. Então o investidor divide o capital a ser investido em várias partes e investe cada parte numa classe de ativo diferente. A vantagem é que caso uma ou mais classes de ativos esteja em baixa, a alta dos demais ativos compensa as perdas. A desvantagem é que os retornos do investimento serão menores, pois as chances de todas as classes de ativos estarem em alta ao mesmo tempo são baixas.",
+      "Diversificação de investimentos consiste em investir em várias classes de ativos financeiros diferentes. A vantagem é que caso uma ou mais classes de ativos esteja em baixa, a alta dos demais ativos compensa as perdas. A desvantagem é que os retornos do investimento serão menores, pois as chances de todas as classes de ativos estarem em alta ao mesmo tempo são baixas.",
   },
   {
     imageUrl: "https://source.unsplash.com/random/300×300",
@@ -73,7 +73,7 @@ const FlashCardsData = [
     imageUrl: "https://source.unsplash.com/random/300×300",
     question: "O que é liquidez de um investimento?",
     answer:
-      "Liquidez é a capacidade de um ativo financeiro ser convertido em dinheiro sem perda significativa de valor. A liquidez é uma característica importante para investidores, pois mede a facilidade de entrar e sair de uma posição de investimento. Alguns investimentos têm liquidez extremamente alta, como CDBs de Disponibilidade Diária, que permitem ao investidor sacar parte ou todo o capital investido em qualquer dia útil. Outros investimentos têm liquidez extremamente baixa, como investimentos em Imóveis, no qual o investidor primeiro precisa vender o imóvel para depois receber o dinheiro, processo que pode levar de meses a anos.",
+      "Liquidez é a capacidade de um ativo financeiro ser convertido em dinheiro sem perda significativa de valor. A liquidez é uma característica importante para investidores, pois mede a facilidade de entrar e sair de uma posição de investimento. Alguns investimentos têm liquidez extremamente alta, como CDBs de Disponibilidade Diária. Outros investimentos têm liquidez extremamente baixa, como investimentos em Imóveis.",
   },
   {
     imageUrl: "https://source.unsplash.com/random/300×300",

@@ -16,12 +16,9 @@ const FlashCard = ({
   const [faceUp, setFaceUp] = useState(true);
 
   return (
-    <div
-      className="flash-card"
-      style={{
-        backgroundImage: `url(${imageUrl})`,
-      }}
-    >
+    <div className="flash-card">
+      <img className="flash-card--image" src={imageUrl}></img>
+
       <div className="flash-card--content">
         <div className="flash-card--functions">
           {faceUp && (

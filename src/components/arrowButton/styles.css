@@ -1,7 +1,8 @@
 .arrow-button {
   width: 45px;
   height: 45px;
-  background-color: var(--light-gray);
+  background-color: var(--dark-gray);
+  color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;

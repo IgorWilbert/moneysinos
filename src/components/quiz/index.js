@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import ArrowButton from "../arrowButton";
 import Button from "../button";
+import FilledQuestion from "../filledQuestion";
 import Question from "../question";
 
 import "./styles.css";
@@ -103,6 +104,11 @@ const Quiz = ({ quizData }) => {
             >
               <Button label="Voltar à Home" />
             </a>
+          </div>
+          <div>
+            {quizData.map((question, index) => (
+              <FilledQuestion question={question} number={index + 1} />
+            ))}
           </div>
         </div>
       )}

@@ -1,0 +1,39 @@
+.filled-question {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.filled-question-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.filled-question-header-number {
+  font-size: 20px;
+}
+
+.filled-question-header-points {
+  color: var(--green);
+  background-color: var(--dark-gray);
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.filled-question-options-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.filled-question-options-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.filled-question-selected {
+  color: var(--red);
+}
+
+.filled-question-correct {
+  color: var(--green);
+}

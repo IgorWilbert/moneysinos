@@ -47,7 +47,7 @@ const QuizData = [
   },
   {
     heading: "O que significa a sigla IPCA?",
-    value: 40,
+    value: 20,
     selectedOption: -1,
     options: [
       {
@@ -70,7 +70,7 @@ const QuizData = [
   },
   {
     heading: "Qual é a função do IPCA?",
-    value: 40,
+    value: 30,
     selectedOption: -1,
     options: [
       {
@@ -93,7 +93,7 @@ const QuizData = [
   },
   {
     heading: "O que é a B3?",
-    value: 40,
+    value: 20,
     selectedOption: -1,
     options: [
       {
@@ -116,7 +116,7 @@ const QuizData = [
   },
   {
     heading: "Qual é a principal função da B3?",
-    value: 40,
+    value: 30,
     selectedOption: -1,
     options: [
       {
@@ -139,7 +139,7 @@ const QuizData = [
   },
   {
     heading: "O que é um fundo de investimento?",
-    value: 40,
+    value: 35,
     selectedOption: -1,
     options: [
       {
@@ -163,7 +163,7 @@ const QuizData = [
   {
     heading:
       "Qual das seguintes opções oferece potencialmente um retorno maior em longo prazo?",
-    value: 40,
+    value: 45,
     selectedOption: -1,
     options: [
       {
@@ -186,7 +186,7 @@ const QuizData = [
   },
   {
     heading: "Qual dos seguintes investimentos é considerado de renda fixa?",
-    value: 40,
+    value: 25,
     selectedOption: -1,
     options: [
       {
@@ -210,7 +210,7 @@ const QuizData = [
   {
     heading:
       "Qual das seguintes opções geralmente tem maior risco associado a ela?",
-    value: 40,
+    value: 30,
     selectedOption: -1,
     options: [
       {
@@ -234,7 +234,7 @@ const QuizData = [
   {
     heading:
       "Qual dos seguintes tipos de investimentos oferece maior liquidez?",
-    value: 40,
+    value: 25,
     selectedOption: -1,
     options: [
       {
@@ -257,7 +257,7 @@ const QuizData = [
   },
   {
     heading: "O que é diversificação de investimentos?",
-    value: 40,
+    value: 20,
     selectedOption: -1,
     options: [
       {
@@ -281,7 +281,7 @@ const QuizData = [
   {
     heading:
       "Qual dos seguintes investimentos é considerado de renda variável?",
-    value: 40,
+    value: 30,
     selectedOption: -1,
     options: [
       {
@@ -305,7 +305,7 @@ const QuizData = [
 
   {
     heading: "O que é liquidez?",
-    value: 40,
+    value: 30,
     selectedOption: -1,
     options: [
       {
@@ -329,7 +329,7 @@ const QuizData = [
   {
     heading:
       "Qual dos seguintes investimentos oferece maior segurança em relação ao risco de perda de capital?",
-    value: 40,
+    value: 25,
     selectedOption: -1,
     options: [
       {

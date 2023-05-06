@@ -17,22 +17,26 @@ const FlashCard = ({
 
   return (
     <div className="flash-card">
-      <img className="flash-card--image" src={imageUrl}></img>
+      <div className="flash-card--image">
+        <img className="flash-card--image-style" src={imageUrl}></img>
+      </div>
 
       <div className="flash-card--content">
         <div className="flash-card--functions">
-          {faceUp && (
-            <>
-              <h2 className="flash-card--title">Pergunta</h2>
-              <p className="flash-card--description">{question}</p>
-            </>
-          )}
-          {!faceUp && (
-            <>
-              <h2 className="flash-card--title">Resposta</h2>
-              <p className="flash-card--description">{answer}</p>
-            </>
-          )}
+          <div className="flash-card--text">
+            {faceUp && (
+              <>
+                <h2 className="flash-card--title">Pergunta</h2>
+                <p className="flash-card--description">{question}</p>
+              </>
+            )}
+            {!faceUp && (
+              <>
+                <h2 className="flash-card--title">Resposta</h2>
+                <p className="flash-card--description">{answer}</p>
+              </>
+            )}
+          </div>
           <div className="flash-card--button">
             <ArrowButton isForward={false} onClick={onClickBackward} />
             <FlipButton onClick={() => setFaceUp(!faceUp)} />

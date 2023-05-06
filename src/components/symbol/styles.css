@@ -1,7 +1,11 @@
+.symbol {
+  width: 100%;
+}
+
 .symbol-graph {
-  border: 3px solid var(--dark-gray);
-  width: 500px;
-  height: 300px;
+  border: 2px solid var(--dark-gray);
+  width: 80vw;
+  height: 30vh;
   background-color: var(--white);
 }
 
@@ -32,4 +36,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .symbol-graph {
+    height: 30vh;
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .symbol-graph {
+    height: 50vh;
+    width: 35vw;
+  }
 }

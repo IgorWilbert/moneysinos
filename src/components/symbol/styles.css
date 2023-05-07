@@ -38,6 +38,10 @@
   align-items: center;
 }
 
+.symbol-range-button {
+  padding-top: 20px;
+}
+
 @media screen and (min-width: 30em) and (max-width: 60em) {
   .symbol-graph {
     height: 30vh;

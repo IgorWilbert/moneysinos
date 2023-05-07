@@ -19,14 +19,15 @@
   padding-bottom: 30px;
 }
 
-.market-detail-rate {
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-
 .market-detail-ipca .market-detail-selic {
   display: flex;
   flex-direction: column;
+}
+
+.market-detail-selic {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
@@ -42,5 +43,9 @@
 
   .market-detail-rates {
     flex-direction: row;
+  }
+
+  .market-detail-selic {
+    padding-top: 0;
   }
 }

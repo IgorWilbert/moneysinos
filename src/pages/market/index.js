@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import SymbolsData from "../../data/symbols";
 
+import Rate from "../../components/rate";
 import Symbol from "../../components/symbol";
 
 import "./styles.css";
@@ -95,12 +96,34 @@ const MarketDetail = () => {
         <h1>Mercado Atual</h1>
         <div className="market-detail-rates">
           <div className="market-detail-ipca">
-            <div className="market-detail-rate">{`IPCA últimos 30 dias: ${marketData.ipcaPast30Days}%`}</div>
-            <div className="market-detail-rate">{`IPCA últimos 12 meses: ${marketData.ipcaPast12Months}%`}</div>
+            <Rate
+              label={"IPCA últimos 30 dias"}
+              value={marketData.ipcaPast30Days}
+              tooltip={"Mede a inflação. Somatório de todos os dias do mês."}
+              tooltipPosition={"top-start"}
+            />
+            <Rate
+              label={"IPCA últimos 12 meses"}
+              value={marketData.ipcaPast12Months}
+              tooltip={"Mede a inflação. Somatório de janeiro a dezembro."}
+              tooltipPosition={"bottom-end"}
+            />
           </div>
           <div className="market-detail-selic">
-            <div className="market-detail-rate">{`SELIC últimos 30 dias: ${marketData.selicPast30Days}%`}</div>
-            <div className="market-detail-rate">{`SELIC últimos 12 meses: ${marketData.selicPast12Months}%`}</div>
+            <Rate
+              label={"SELIC últimos 30 dias"}
+              value={marketData.selicPast30Days}
+              tooltip={
+                "Taxa básica de juros. Somatório de todos os dias do mês."
+              }
+              tooltipPosition={"top-start"}
+            />
+            <Rate
+              label={"SELIC últimos 12 meses"}
+              value={marketData.selicPast12Months}
+              tooltip={"Taxa básica de juros. Somatório de janeiro a dezembro."}
+              tooltipPosition={"bottom-end"}
+            />
           </div>
         </div>
         {SymbolsData.map((s) => (

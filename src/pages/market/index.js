@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import SymbolsData from "../../data/symbols";
 
+import Button from "../../components/button";
 import Rate from "../../components/rate";
 import Symbol from "../../components/symbol";
 
@@ -30,6 +31,8 @@ const getData = async (startDate, endDate, isIpca = true) => {
 };
 
 const MarketDetail = () => {
+  const [showTooltip, setShowTooltip] = useState(false);
+
   const today = new Date();
   const thirtyDaysAgo = new Date(
     new Date().setMonth(new Date().getMonth() - 1)
@@ -93,7 +96,14 @@ const MarketDetail = () => {
   return (
     <div className="market-detail">
       <div className="market-detail-content">
-        <h1>Mercado Atual</h1>
+        <div className="market-detail-header">
+          <h1>Mercado Atual</h1>
+          <Button
+            label={showTooltip ? "Ocultar Dicas" : "Mostrar Dicas"}
+            onClick={() => setShowTooltip(!showTooltip)}
+            small={true}
+          />
+        </div>
         <div className="market-detail-rates">
           <div className="market-detail-ipca">
             <Rate
@@ -101,12 +111,14 @@ const MarketDetail = () => {
               value={marketData.ipcaPast30Days}
               tooltip={"Mede a inflação. Somatório de todos os dias do mês."}
               tooltipPosition={"top-start"}
+              open={showTooltip}
             />
             <Rate
               label={"IPCA últimos 12 meses"}
               value={marketData.ipcaPast12Months}
               tooltip={"Mede a inflação. Somatório de janeiro a dezembro."}
               tooltipPosition={"bottom-end"}
+              open={showTooltip}
             />
           </div>
           <div className="market-detail-selic">
@@ -117,12 +129,14 @@ const MarketDetail = () => {
                 "Taxa básica de juros. Somatório de todos os dias do mês."
               }
               tooltipPosition={"top-start"}
+              open={showTooltip}
             />
             <Rate
               label={"SELIC últimos 12 meses"}
               value={marketData.selicPast12Months}
               tooltip={"Taxa básica de juros. Somatório de janeiro a dezembro."}
               tooltipPosition={"bottom-end"}
+              open={showTooltip}
             />
           </div>
         </div>

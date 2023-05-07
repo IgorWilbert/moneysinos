@@ -10,12 +10,18 @@
   width: 90vw;
 }
 
+.market-detail-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
 .market-detail-rates {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 30px;
 }
 
@@ -41,7 +47,14 @@
     width: 40vw;
   }
 
+  .market-detail-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .market-detail-rates {
+    padding-top: 20px;
     flex-direction: row;
   }
 

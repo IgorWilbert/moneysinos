@@ -9,3 +9,9 @@
   cursor: pointer;
   outline: inherit;
 }
+
+.button-small {
+  font-size: 11px;
+  padding: 5px;
+  max-width: 80px;
+}

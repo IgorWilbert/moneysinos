@@ -1,7 +1,7 @@
 import "./styles.css";
 
-const Button = ({ onClick, label }) => (
-  <button className="button" onClick={onClick}>
+const Button = ({ onClick, label, small = false }) => (
+  <button className={`button ${small ? "button-small" : ""}`} onClick={onClick}>
     {label}
   </button>
 );

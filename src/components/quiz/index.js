@@ -86,10 +86,14 @@ const Quiz = ({ quizData }) => {
       )}
       {showScore && (
         <div>
-          <h1>Parabéns!</h1>
+          <h1>{`${
+            getQuestionsRight(quizData) > quizData.length / 2
+              ? "Parabéns!"
+              : "Todo começo é difícil..."
+          }`}</h1>
           <p>{`Sua pontuação foi de ${getScore(
             quizData
-          )} e você acertou ${getQuestionsRight(quizData)} de ${
+          )} pontos e você acertou ${getQuestionsRight(quizData)} de ${
             quizData.length
           } questões`}</p>
           <div className="quiz-result-buttons">

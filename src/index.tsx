@@ -5,7 +5,6 @@ import "./index.css";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 
 import Header from "./components/header";
-import Footer from "./components/footer";
 
 import FlashCards from "./pages/flashCards";
 import Home from "./pages/home";
@@ -36,7 +35,6 @@ ReactDOM.render(
     <div className="App">
       <Header />
       <RouterProvider router={router} />
-      <Footer />
     </div>
   </React.StrictMode>,
   document.getElementById("root")

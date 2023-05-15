@@ -44,6 +44,21 @@
   padding-top: 20px;
 }
 
+.flash-card--references {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  color: var(--dark-gray);
+  font-size: 13px;
+}
+
+.flash-card--link {
+  color: var(--green);
+  text-decoration: none;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
 @media screen and (min-width: 30em) and (max-width: 60em) {
   .flash-card {
     width: 60vw;
@@ -55,6 +70,18 @@
 
   .flash-card--image-style {
     max-height: 500px;
+  }
+
+  .flash-card--title {
+    font-size: 18px;
+  }
+
+  .flash-card--description {
+    font-size: 16px;
+  }
+
+  .flash-card--references {
+    font-size: 15px;
   }
 }
 
@@ -69,5 +96,17 @@
 
   .flash-card--image-style {
     max-height: 600px;
+  }
+
+  .flash-card--title {
+    font-size: 20px;
+  }
+
+  .flash-card--description {
+    font-size: 18px;
+  }
+
+  .flash-card--references {
+    font-size: 17px;
   }
 }

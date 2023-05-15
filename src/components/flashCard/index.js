@@ -12,6 +12,7 @@ const FlashCard = ({
   imageUrl,
   onClickForward,
   onClickBackward,
+  references,
 }) => {
   const [faceUp, setFaceUp] = useState(true);
 
@@ -34,6 +35,14 @@ const FlashCard = ({
               <>
                 <h2 className="flash-card--title">Resposta</h2>
                 <p className="flash-card--description">{answer}</p>
+                <div className="flash-card--references">
+                  <p>Fontes:</p>
+                  {references.map((r) => (
+                    <a className="flash-card--link" href={r.url}>
+                      {r.name}
+                    </a>
+                  ))}
+                </div>
               </>
             )}
           </div>

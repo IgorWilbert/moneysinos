@@ -37,6 +37,7 @@ const FlashCards = () => {
                     onClickBackward(cardIndex, FlashCardsData.length - 1)
                   )
                 }
+                references={card.references}
               />
             )}
           </>

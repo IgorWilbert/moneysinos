@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/moneysinos/static/css/main.ccfd8d23.css",
-    "main.js": "/moneysinos/static/js/main.ddb3d8f7.js",
+    "main.css": "/moneysinos/static/css/main.30c56c3f.css",
+    "main.js": "/moneysinos/static/js/main.3c4415ba.js",
     "index.html": "/moneysinos/index.html",
-    "main.ccfd8d23.css.map": "/moneysinos/static/css/main.ccfd8d23.css.map",
-    "main.ddb3d8f7.js.map": "/moneysinos/static/js/main.ddb3d8f7.js.map"
+    "main.30c56c3f.css.map": "/moneysinos/static/css/main.30c56c3f.css.map",
+    "main.3c4415ba.js.map": "/moneysinos/static/js/main.3c4415ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccfd8d23.css",
-    "static/js/main.ddb3d8f7.js"
+    "static/css/main.30c56c3f.css",
+    "static/js/main.3c4415ba.js"
   ]
 }
